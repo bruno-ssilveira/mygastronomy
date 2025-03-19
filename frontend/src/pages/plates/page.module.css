@@ -1,0 +1,102 @@
+.platesPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	padding: 2em;
+}
+
+.goToTop {
+	position: fixed;
+	top: 520px;
+	right: 30px;
+	font-size: xx-large;
+	color: var(--dark-green);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.goToTop:hover {
+	animation: jump 0.3s ease-in-out infinite;
+}
+
+.platesContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2em;
+}
+
+.platesContainer img {
+	width: 10em;
+	border-radius: 1em;
+}
+
+.cardsPlates {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5em;
+	background-color: var(--dark-green);
+	color: var(--bege);
+	padding: 1em;
+	border-radius: 1em;
+	cursor: pointer;
+	width: 60%;
+}
+
+.cardsPlates:hover {
+	opacity: 92%;
+}
+
+.plateDescription {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+
+.cardsPlates h3 {
+	align-self: flex-end;
+}
+
+@media screen and (max-width: 1154px) {
+	.cardsPlates {
+		flex-direction: column;
+		gap: .5em;
+	}
+
+	.platesContainer img {
+		width: 8em;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.plateDescription {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.cardsPlates {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1019px) {
+	.goToTop {
+		position: relative;
+		top: auto;
+		right: auto;
+	}
+}

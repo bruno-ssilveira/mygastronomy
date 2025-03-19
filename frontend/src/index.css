@@ -5,15 +5,24 @@
 	font-family: "Instrument Sans", sans-serif;
 }
 
+:root {
+	--dark-green: #004643;
+	--bege: #faf0ca;
+	--pending: #e8e787;
+	--completed: #57a156;
+	--canceled: #ae3131;
+}
+
 #root {
 	font-size: x-large;
-	background-color: #faf0ca;
-	color: #004643;
+	background-color: var(--bege);
+	color: var(--dark-green);
 	min-height: 100vh;
 }
 
 main {
 	max-width: 1280px;
+	min-height: 100vh;
 	margin: 0 auto;
 }
 
@@ -24,8 +33,8 @@ button {
 	gap: 0.5em;
 	min-width: 8em;
 	width: fit-content;
-	background-color: #004643;
-	color: #faf0ca;
+	background-color: var(--dark-green);
+	color: var(--bege);
 	border: none;
 	border-radius: 1em;
 	padding: 1em;

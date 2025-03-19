@@ -1,0 +1,35 @@
+.footerContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: var(--dark-green);
+	color: var(--bege);
+}
+
+.footerContainer img {
+	width: 4em;
+}
+
+.creator {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1em;
+}
+
+.creator a{
+	color: var(--bege);
+	text-decoration: underline;
+}
+
+.creator a:hover {
+	color: white;
+}
+
+@media screen and (max-width: 500px){
+	.creator {
+		font-size: 18px;
+		gap: .5em;
+	}
+}

@@ -3,6 +3,7 @@ import { TextField } from '@mui/material'
 import styles from './page.module.css'
 import authServices from '../../services/auth'
 import { LuLogIn } from "react-icons/lu";
+import Loading from '../loading/page';
 
 export default function Auth() {
     const [formType, setFormType] = useState('login')
@@ -43,7 +44,7 @@ export default function Auth() {
     }
 
     if(authLoading) {
-        return( <h1>Loading...</h1> )
+        return( <Loading /> )
     }
 
     return (

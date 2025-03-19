@@ -32,7 +32,7 @@ export default function Navbar() {
 
             <div className={styles.mobileNavbarItems}>
                 <Link to={'/'}>
-                    <img src='/logo.png' alt='' className={styles.logo}/>
+                    <img src='/imgs/logo.png' alt='' className={styles.logo}/>
                 </Link>
                 <div className={styles.mobileNavbarBtns}>
                     <Link to={'/cart'}>

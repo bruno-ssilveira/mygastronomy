@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import authServices from '../../services/auth'
 import orderServices from '../../services/order'
 import styles from './page.module.css'
-import { LuLogOut, LuTimer, LuCircleAlert, LuCircleCheck } from "react-icons/lu"
+import { LuLogOut, LuTimer, LuCircleAlert, LuCircleCheck, LuMousePointerClick } from "react-icons/lu"
+import Loading from '../loading/page'
 
 export default function Profile() {
     const { logout } = authServices()
@@ -20,7 +21,7 @@ export default function Profile() {
     }, [authData, refetchOrders])
 
     if(orderLoading) {
-        return ( <h1>Loading...</h1> )
+        return ( <Loading /> )
     }
 
     const handleLogout = () => {
@@ -55,8 +56,9 @@ export default function Profile() {
                     ))}
                 </div>
             :
-                <div>
-                    You don't have orders yet.
+                <div className={styles.noOrdersContainer}>
+                    <p>You don't have orders yet.</p>
+                    <Link to={'/plates'} className={styles.specialities}>See our specialities <LuMousePointerClick /> </Link>
                 </div>
             }
         </div>

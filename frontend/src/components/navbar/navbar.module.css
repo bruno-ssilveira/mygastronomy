@@ -1,7 +1,7 @@
 .navbarContainer {
     display: flex;
     align-items: center;
-    background-color: #004643;
+    background-color: var(--dark-green);
     height: 96px;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .navbarLink {
-    color: #faf0ca;
+    color: var(--bege);
 }
 
 .navbarLink:active {
@@ -36,6 +36,10 @@
 
 .mobileNavbarItems {
     display: none;
+}
+
+.navbarLink:hover {
+    color: #ffffff
 }
 
 .mobileNavbarBtns {
@@ -67,5 +71,5 @@
     padding: 3em;
     gap: 2em;
     font-size: xx-large;
-    background-color: #004643;
+    background-color: var(--dark-green);
 }
