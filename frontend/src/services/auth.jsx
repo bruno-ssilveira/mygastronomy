@@ -5,7 +5,7 @@ export default function authServices() {
     const [authLoading, setAuthLoading] = useState(false)
     const navigate = useNavigate()
 
-    const url = 'http://localhost:3000/auth'
+    const url = 'https://mygastronomy-6gwt.onrender.com/auth'
 
     const login = (formData) => {
         setAuthLoading(true)
