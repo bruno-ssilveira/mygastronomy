@@ -12,14 +12,14 @@ import Cart from './pages/cart/page.jsx'
 
 const pages = createBrowserRouter([
 	{
-	  path: '/mygastronomy',
+	  path: '/',
 	  element: <App />,
 	  children: [
-		{ path: '/mygastronomy', element: <Home /> },
-		{ path: '/mygastronomy/auth', element: <Auth /> },
-		{ path: '/mygastronomy/profile', element: <Profile /> },
-		{ path: '/mygastronomy/plates', element: <Plates /> },
-		{ path: '/mygastronomy/cart', element: <Cart /> },
+		{ path: '/', element: <Home /> },
+		{ path: '/auth', element: <Auth /> },
+		{ path: '/profile', element: <Profile /> },
+		{ path: '/plates', element: <Plates /> },
+		{ path: '/cart', element: <Cart /> },
 	  ],
 	},
   ])
