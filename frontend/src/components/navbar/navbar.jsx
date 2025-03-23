@@ -17,28 +17,28 @@ export default function Navbar() {
     return (
         <nav className={styles.navbarContainer}>
             <div className={styles.navbarItems}>
-                <Link to={'/'}>
+                <Link to={'/mygastronomy'}>
                     <img src='/imgs/logo.png' alt='' className={styles.logo}/>
                 </Link>
                 <div className={styles.navBarLinksContainer}>
-                    <Link to={'/'} className={styles.navbarLink}>Home</Link>
-                    <Link to={'/plates'} className={styles.navbarLink}>Plates</Link>
-                    <Link to={'/cart'} className={styles.cartItem}>
+                    <Link to={'/mygastronomy'} className={styles.navbarLink}>Home</Link>
+                    <Link to={'/mygastronomy/plates'} className={styles.navbarLink}>Plates</Link>
+                    <Link to={'/mygastronomy/cart'} className={styles.cartItem}>
                         <LuShoppingCart className={styles.navbarLink} />
                         {cartItems.length > 0 ? <p>{cartItems.length}</p> : ''}
                     </Link>
-                    <Link to={'/profile'}>
+                    <Link to={'/mygastronomy/profile'}>
                         <TbUserCircle className={styles.navbarLink} />
                     </Link>
                 </div>
             </div>
 
             <div className={styles.mobileNavbarItems}>
-                <Link to={'/'}>
+                <Link to={'/mygastronomy'}>
                     <img src='/imgs/logo.png' alt='' className={styles.logo}/>
                 </Link>
                 <div className={styles.mobileNavbarBtns}>
-                    <Link to={'/cart'}>
+                    <Link to={'/mygastronomy/cart'}>
                         <LuShoppingCart className={styles.navbarLink} />
                     </Link>
                     <LuMenu className={styles.navbarLink} onClick={handleOpenMenu} />
@@ -47,9 +47,9 @@ export default function Navbar() {
 
             <Drawer anchor='right' open={openMenu} onClose={handleOpenMenu} >
                 <div className={styles.drawer}>
-                    <Link to={'/'} className={styles.navbarLink} onClick={handleOpenMenu} >Home</Link>
-                    <Link to={'/plates'} className={styles.navbarLink} onClick={handleOpenMenu} >Plates</Link>
-                    <Link to={'/profile'} className={styles.navbarLink} onClick={handleOpenMenu} >Profile</Link>
+                    <Link to={'/mygastronomy'} className={styles.navbarLink} onClick={handleOpenMenu} >Home</Link>
+                    <Link to={'/mygastronomy/plates'} className={styles.navbarLink} onClick={handleOpenMenu} >Plates</Link>
+                    <Link to={'/mygastronomy/profile'} className={styles.navbarLink} onClick={handleOpenMenu} >Profile</Link>
                 </div>
             </Drawer>
         </nav>
