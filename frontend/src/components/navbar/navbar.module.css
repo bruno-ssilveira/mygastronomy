@@ -73,3 +73,16 @@
     font-size: xx-large;
     background-color: var(--dark-green);
 }
+
+.cartItem {
+    display: flex;
+}
+
+.cartItem p:last-child {
+    color: var(--bege);
+    font-size: 16px;
+    background-color: green;
+    border-radius: 100%;
+    padding: 2px 6px 2px 6px;
+    
+}

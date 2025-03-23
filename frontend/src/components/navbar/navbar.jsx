@@ -4,9 +4,11 @@ import { TbUserCircle } from 'react-icons/tb'
 import { Drawer } from '@mui/material'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../../contexts/useCartContext'
 
 export default function Navbar() {
     const [openMenu, setOpenMenu] = useState(false)
+    const { cartItems } = useCartContext()
 
     const handleOpenMenu = () => {
         setOpenMenu(!openMenu)
@@ -21,8 +23,9 @@ export default function Navbar() {
                 <div className={styles.navBarLinksContainer}>
                     <Link to={'/'} className={styles.navbarLink}>Home</Link>
                     <Link to={'/plates'} className={styles.navbarLink}>Plates</Link>
-                    <Link to={'/cart'}>
+                    <Link to={'/cart'} className={styles.cartItem}>
                         <LuShoppingCart className={styles.navbarLink} />
+                        {cartItems.length > 0 ? <p>{cartItems.length}</p> : ''}
                     </Link>
                     <Link to={'/profile'}>
                         <TbUserCircle className={styles.navbarLink} />

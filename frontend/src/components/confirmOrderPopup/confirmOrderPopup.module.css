@@ -1,0 +1,47 @@
+.popupContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 1em;
+	background-color: var(--bege);
+	color: var(--dark-green);
+	border: 10px solid var(--dark-green);
+}
+
+.orderPrice {
+	display: flex;
+	flex-direction: row;
+	gap: .5em;
+	font-size: x-large;
+	font-weight: 900;
+}
+
+.confirmBtns {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+}
+
+.confirmBtns button:first-child {
+	font-size: large;
+}
+
+.confirmBtns button:first-child:hover {
+	color: red;
+}
+
+.confirmBtns button:first-child:active {
+	transform: translate(2px, 2px);
+}
+
+.confirmBtns button:last-child {
+	font-size: large;
+}
+
+.confirmBtns button:last-child:hover {
+	color: rgb(0, 198, 0);
+}
+
+.confirmBtns button:last-child:active {
+	transform: translate(2px, 2px);
+}
